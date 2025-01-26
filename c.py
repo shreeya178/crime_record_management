@@ -200,6 +200,7 @@ class CriminalManagementSystem:
                           name=?, crime_location=?, occupation=?, arrest_date=?, crime_date=?, 
                           crime_type=?, address=?, father_name=?, age=?, gender=?
                           WHERE id=?''', record + (record_id,))
+        print("Committing to DB")
         self.conn.commit()
 
     def delete_record(self, record_id):
